@@ -1,0 +1,57 @@
+I. Component
+    - React applications are entirely made out of compenents
+    - Buildding blocks of user interface in React
+    - Piece of UI that has it own data, login and appearance (how it works and looks)
+    - Build complex by building multiple components and combining them
+    - Components can be reused, nested inside each other and pass data between
+
+    --> How to breaks design into compents
+    Component Tree:
+    App - Video Player
+    	- Menu
+    	- Refine Questions(Parent compnent) - Filter (Child component)
+    	- Questions List - Question
+    					 - Question
+    					 - Question
+
+    Component
+    - Only return exacly one element
+    - Nested does not means write the function in another, but include components
+    - In realword we divide code in to module
+    - We can call each component multiple times to reuse it  
+
+II. WHAT is JSX ????
+	- An extension of JS
+	- Component contains data, logic, appearence
+	- Declaratice syntax to describe what components look like and how they word
+	- Components must return a block of JSX
+	- Extension of JS that allow us to embed JS CSS and React components into HTML 
+	- Each JSX elements is converted to a React.createElement function
+	- We could use React without JSX but does not effective and hard to understand
+
+	JSX is DECALREATIVE!!
+	- IMPERATIVE: (How to do things)
+		- Manaue DOM element selections and DOM traversing
+		- Step-by-step DOM mutaions until we reach the desired UI
+	- DECLARATIVE: (What you wants)
+		- Describe what UI should look like using JSX, based on current data
+		- No DOM manipulation
+		- React is an abstraction away from DOM: we never touch the DOM
+		- Instead, we think of the UI has a reflection of the current data
+
+III. Seperation of Concern!
+	1. Rise of interactive SPAs
+		- One technology per file (traditional)
+	2. JS is in charge of HTML
+		- HTML does not make sense without JS
+	3. Logic and UI are tightly coupled
+	4. Why keep them seperated
+	5. React Component + JSX
+
+	Component includes - Data
+					   - Logic
+					   - Appearance
+	All in 1 file
+
+	In React we have one component per file (React sepetration of concern)
+	- Each component is concerned with one piece of the UI
