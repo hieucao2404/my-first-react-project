@@ -54,4 +54,40 @@ III. Seperation of Concern!
 	All in 1 file
 
 	In React we have one component per file (React sepetration of concern)
-	- Each component is concerned with one piece of the UI
+	- Each component is concerned with one piece of the UI 
+
+IV. PROPS
+	1. 
+	- Props is how we pass data from parent to children component (down the component tree)
+	- Essential tool to configure and customize components(like function parameters)
+	- With props, parent componets control how child components look and work
+	- Anything can be passed as props: single values, arrays, objects, functions, even other components
+
+	2. PROPS ARE READ-ONLY
+	Data in component inlude 
+	- Props: is data coming from the outside and can only be updated by the parent component. Immutable.
+		+ Mutate props would affect parent, creating side effects(not pure)
+		+ Component have to be pure functions interms of props and state
+		+ This allow React to optimize apps, avoid bugs, make apps predictable
+	- State: State is internal data that can be updated by the component's logic
+
+	3. ONE-WAY DATA FLOW
+	- In react, data can only be passed from parent to children by using props (can not be other way around)
+	Why?:
+	- Make applications more predictable and easier to understand
+	- Make applications easier to de bug, as we have more control over the data
+	- Applications is more performant
+
+V. Rules of JSX
+	1. General Ruls
+	- JSX works essentially like HTML, but we can enter "JS mode" by using {} (for text or attributes)
+	- We can place JS expressions inside {}. Example: reference variables, create arrays or objects,[].map(). termary operator
+	- Statement are not allowed(if/else, for, switch)
+	- JSX produces a JS expression
+		+ We can place other pieces of JSX inside{}
+		+ We can write JSX anywhere inside a component (in if/else, assign to variables, pass it into functions)
+	- A piece of JSX can only have one root element. If you need more, use <React.Fragment> (or the short <>)
+
+VI. Rendering Lists
+	1. Means
+	-  When we have an arrays and want to create a component for each element of an array

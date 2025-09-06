@@ -74,21 +74,29 @@ function Pizza(props) {
     <li className="pizza">
       <img src={props.pizzaObj.photoName} alt={props.pizzaObj.name} />
       <div>
-      <h3>{props.pizzaObj.name}</h3>
-      <p>{props.pizzaObj.ingredients}</p>
-      <span>{props.pizzaObj.price + 3}</span>
+        <h3>{props.pizzaObj.name}</h3>
+        <p>{props.pizzaObj.ingredients}</p>
+        <span>{props.pizzaObj.price + 3}</span>
       </div>
     </li>
   );
 }
 //Parent com of Pizza
 function Menu() {
+//  const pizzas = pizzaData;
+const pizzas = [];
+const numPizzas = pizzas.length;
   return (
     <main className="menu">
       <h2>Out menu</h2>
+
+      {numPizzas > 0 && (
       <ul className="pizzas">
-        {pizzaData.map(pizza => <Pizza pizzaObj={pizza} key={pizza.name}/>)}
+        {pizzaData.map((pizza) => (
+          <Pizza pizzaObj={pizza} key={pizza.name} />
+        ))}
       </ul>
+      )}
       {/*<Pizza
         name="Pizza Spinachi"
         ingredients="Tomato, mozarella,  spinach, and ricotta cheese"
@@ -110,7 +118,7 @@ function Menu() {
 function Footer() {
   const hour = new Date().getHours();
   const openHour = 12;
-  const closeHour = 24;
+  const closeHour = 23;
   const isOpen = hour >= openHour && hour <= closeHour;
   console.log(isOpen);
 
@@ -118,8 +126,15 @@ function Footer() {
   // else alert("Sorry we're closed");
 
   return (
+    //short circuiting
     <footer className="footer">
-      {new Date().toLocaleDateString()}. We currently open!
+      {isOpen && (
+        <div className="order">
+          {" "}
+          <p>We're open until {closeHour}:00. Come visit us order online</p>
+          <button className="btn">Order</button>
+        </div>
+      )}
     </footer>
   );
   //JSX and create element
