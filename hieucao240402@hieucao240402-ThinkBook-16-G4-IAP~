@@ -60,36 +60,4 @@ II/ Conditional Rendering
 
 	2/ Conditionally including JSX
 	}
-
-III/ Conditional Rendering With Multiple Returns
-	- Only use when want to return a JS in a certain condition
-
-IV/ Destructuring Props
-	- Avoid typing props.... all the time -> We do it with destructuring
-
-V/ React Fragment
-	- JSX piece: No matter where it is defined can only have one root element
-	- React fragment can help us group elements without any traits
-
-VI/ Setting classes and Text conditionally
 	
-REVIEW: 
-	- Components are the buidldin of user interface
-	- Eeach component include data, js logic, Apprearance: JSX
-	- JSX block is what we return from a components
-		+ "HTML"
-		+ CSS
-		+ JS inside {} (entering js mode)
-
-	- Component tree: the one above is the parent of the lower
-		+ App is the parent of Header, Body, Footer
-		+ Parent can pass data to child using props(property)
-		+ Using props we can configure component as we wish
-		+ Props can only pass down on the tree
-
-	- Rendering  multiple components  at once using JS map() method
-
-	- Conditional Rendering: Components can be conditionally redered using JS tools: &&, ?, and multiple return
-
-
-SECTION 6: STATE, EVENTS and FROMS: INTERACTIVE COMPONENTS
